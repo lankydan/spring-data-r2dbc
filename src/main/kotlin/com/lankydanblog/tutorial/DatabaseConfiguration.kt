@@ -12,6 +12,7 @@ import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories
 @EnableR2dbcRepositories
 class DatabaseConfiguration(
   @Value("\${spring.data.postgres.host}") private val host: String,
+  @Value("\${spring.data.postgres.port}") private val port: Int,
   @Value("\${spring.data.postgres.database}") private val database: String,
   @Value("\${spring.data.postgres.username}") private val username: String,
   @Value("\${spring.data.postgres.password}") private val password: String
@@ -21,6 +22,7 @@ class DatabaseConfiguration(
     return PostgresqlConnectionFactory(
       PostgresqlConnectionConfiguration.builder()
         .host(host)
+        .port(port)
         .database(database)
         .username(username)
         .password(password).build()

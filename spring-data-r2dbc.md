@@ -71,7 +71,9 @@ class DatabaseConfiguration(
 ```
 The first thing to notice here is the extension of `AbstractR2dbcConfiguration`. This class contains a load of Beans that we no longer need to manually create. Implementing `connectionFactory` is the only requirement of the class as it is required to create the `DatabaseClient` Bean. This sort of structure is typical of Spring Data modules so it feels quite familiar when trying out a different one. Furthermore, I'd expect this manual configuration to be removed once auto-configuration is available and be solely driven via the `application.properties`.
 
-The four properties defined by the `PostgresqlConnectionFactory` are the bare minimum to get it working. Any less and you will experience exceptions during startup.
+I have included the `port` property here, but if you have not played around with your Postgres configuration then you can rely on the default value of `5432`.
+
+The four properties: `host`, `database`, `username` and `password` defined by the `PostgresqlConnectionFactory` are the bare minimum to get it working. Any less and you will experience exceptions during startup.
 
 Using this configuration, Spring is able to connect to a running Postgres instance.
 

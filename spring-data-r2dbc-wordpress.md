@@ -55,7 +55,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>The four properties defined by the <code>PostgresqlConnectionFactory</code> are the bare minimum to get it working. Any less and you will experience exceptions during startup.</p>
+<p>I have included the <code>port</code> property here, but if you have not played around with your Postgres configuration then you can rely on the default value of <code>5432</code>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The four properties: <code>host</code>, <code>database</code>, <code>username</code> and <code>password</code> defined by the <code>PostgresqlConnectionFactory</code> are the bare minimum to get it working. Any less and you will experience exceptions during startup.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
