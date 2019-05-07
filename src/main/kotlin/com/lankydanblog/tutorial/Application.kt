@@ -23,10 +23,10 @@ class Application : CommandLineRunner {
       )
     ).log().subscribe()
     Thread.sleep(2000)
-    personRepository.findAll().log().subscribe { log.info("findAll - $it") }
-    personRepository.findAllById(Mono.just(1)).log().subscribe { log.info("findAllById - $it") }
-    personRepository.findAllByName("Laura So").log().subscribe { log.info("findAllByName - $it") }
-    personRepository.findAllByAge(25).log().subscribe { log.info("findAllByAge - $it") }
+    personRepository.findAll().subscribe { log.info("findAll - $it") }
+    personRepository.findAllById(Mono.just(1)).subscribe { log.info("findAllById - $it") }
+    personRepository.findAllByName("Laura So").subscribe { log.info("findAllByName - $it") }
+    personRepository.findAllByAge(25).subscribe { log.info("findAllByAge - $it") }
     Thread.sleep(5000)
   }
 

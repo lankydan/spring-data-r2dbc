@@ -10,9 +10,9 @@ import reactor.core.publisher.Flux
 @Repository
 interface PersonRepository : R2dbcRepository<Person, Int> {
 
-  @Query("SELECT * FROM people WHERE name = $1")
+  @Query("SELECT * FROM people WHERE name = @name")
   fun findAllByName(name: String): Flux<Person>
 
-  @Query("SELECT * FROM people WHERE age = $1")
+  @Query("SELECT * FROM people WHERE age = @age")
   fun findAllByAge(age: Int): Flux<Person>
 }

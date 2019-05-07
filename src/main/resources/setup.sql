@@ -1,0 +1,10 @@
+CREATE DATABASE mytestdb
+GO
+USE mytestdb
+GO
+CREATE TABLE people (
+    id INT NOT NULL IDENTITY PRIMARY KEY,
+    name VARCHAR(75) NOT NULL,
+    age INTEGER NOT NULL
+)
+GO
