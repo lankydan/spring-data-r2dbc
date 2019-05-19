@@ -78,6 +78,8 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <!-- specified to fix build error for now -->
+        <version>2.1.5.RELEASE</version>
       </plugin>
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
