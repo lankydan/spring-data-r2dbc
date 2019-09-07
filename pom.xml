@@ -55,6 +55,12 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-kotlin-extensions</artifactId>
+      <version>1.0.0.M1</version>
+    </dependency>
   </dependencies>
 
   <repositories>
